@@ -4,7 +4,7 @@
 # Skip to
 
 - [Creating an Application](#creating-an-application)
-- [Authentication](#authentication)
+- [Authorization](#authorization)
 - [Endpoints](#endpoints)
 	- [Token management](#token-management)
 	- [Profile information](#profile-information)
@@ -67,7 +67,7 @@ When a user is redirected to your redirect URI following authorization, an `acce
 
 For example, your user may be redirected to the URL `https://example.com/auth?accesstoken=66sULabGH9AK2dqjt0SVCzBq0BKN_mB2`.
 
-# Authentication
+# Authorization
 
 To authenticate to endpoints, use an `Authorization` header containing just your application's private token, a colon, and an accesstoken provided to your application. (See [Accepting Access Tokens](#accepting-access-tokens) for more info about access tokens.)
 
