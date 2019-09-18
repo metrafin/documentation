@@ -9,7 +9,12 @@
 	- [Token management](#token-management)
 	- [Profile information](#profile-information)
 	- [Reputation reading](#reputation-reading)
+		- [Get permissions](#get-v1permissions)
+		- [Get HonorScore](#get-v1honorscore)
 	- [Reputation contribution](#reputation-contribution)
+		- [List reputation events](#get-v1reputationeventlist)
+		- [Create reputation event](#post-v1reputationevent)
+		- [Disable or reenable reputation event](#post-v1reputationeventsetactive)
 	- [Resolving usernames and user IDs](#resolving-usernames-and-user-ids)
 
 # Introduction
