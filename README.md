@@ -9,7 +9,7 @@
 	- [Token management](#token-management)
 	- [Profile information](#profile-information)
 	- [Reputation reading](#reputation-reading)
-		- [Get permissions](#get-v1permissions)
+		- [Get Permissions](#get-v1permissions)
 		- [Get HonorScore](#get-v1honorscore)
 	- [Reputation contribution](#reputation-contribution)
 		- [List reputation events](#get-v1reputationeventlist)
@@ -83,9 +83,9 @@ The API base URL is `https://api.metrafin.com`.
 
 ### GET `/v1/token`
 
-*Description*: Fetch information about an access token.
+**Description**: Fetch information about an access token.
 
-*Auth*: `app_private:accesstoken`
+**Auth**: `app_private:accesstoken`
 
 Example response:
 
@@ -105,15 +105,15 @@ Example response:
 }
 ```
 
-## Profile Information
+## Profile information
 
 ### GET `/v1/profile`
 
-*Description*: Fetch information about a user's profile. Some information may be missing depending on the auth scopes granted to your application.
+**Description**: Fetch information about a user's profile. Some information may be missing depending on the auth scopes granted to your application.
 
-*OPTIONAL auth scopes*: profile_basic (name and pronoun), profile_home (home address), profile_phone (phone number), profile_age (age in years)
+**OPTIONAL auth scopes**: profile_basic (name and pronoun), profile_home (home address), profile_phone (phone number), profile_age (age in years)
 
-*Auth*: `app_private:accesstoken`
+**Auth**: `app_private:accesstoken`
 
 Example response:
 
@@ -148,11 +148,11 @@ Example response:
 
 ### GET `/v1/permissions`
 
-*Description*: Provides a user's global permissions. Your application should utilize these and check with Metrafin's permissions endpoint when the user tries to perform an action which may be limited by a permission.
+**Description**: Provides a user's global permissions. Your application should utilize these and check with Metrafin's permissions endpoint when the user tries to perform an action which may be limited by a permission.
 
-*REQUIRED auth scopes*: NONE
+**REQUIRED auth scopes**: NONE
 
-*Auth*: `app_private:accesstoken`
+**Auth**: `app_private:accesstoken`
 
 Example response:
 
@@ -174,11 +174,11 @@ Example response:
 
 ### GET `/v1/honorScore`
 
-*Description*: Provides a user's HonorScore for displaying to moderators or users.
+**Description**: Provides a user's HonorScore for displaying to moderators or users.
 
-*REQUIRED auth scopes*: reputation_read
+**REQUIRED auth scopes**: reputation_read
 
-*Auth*: `app_private:accesstoken`
+**Auth**: `app_private:accesstoken`
 
 Example response:
 
@@ -193,7 +193,7 @@ Example response:
 
 ### POST `/v1/reputationEvent`
 
-*Description*:
+**Description**:
 
 Creates a new reputation event for the user. Most apps are only allowed to create reputation events with type "negative".
 
@@ -228,9 +228,9 @@ Reputation event tags:
 - "chargeback" - A user has issued a chargeback for a fulfilled purchase.
 - "threat" - A user has issued a threat of some type.
 
-*REQUIRED auth scopes*: reputation_contribute
+**REQUIRED auth scopes**: reputation_contribute
 
-*Auth*: `app_private:accesstoken`
+**Auth**: `app_private:accesstoken`
 
 Example request:
 
@@ -254,11 +254,11 @@ Example response:
 
 ### GET `/v1/reputationEvent/list`
 
-*Description*: Provides a user's reputation events assigned by your application in a history record.
+**Description**: Provides a user's reputation events assigned by your application in a history record.
 
-*REQUIRED auth scopes*: NONE
+**REQUIRED auth scopes**: NONE
 
-*Auth*: `app_private:accesstoken`
+**Auth**: `app_private:accesstoken`
 
 Example response:
 
@@ -290,11 +290,11 @@ Example response:
 
 ### POST `/v1/reputationEvent/setActive`
 
-*Description*: This endpoint is used to enable or disable reputation events' effects on user permissions and HonorScores.
+**Description**: This endpoint is used to enable or disable reputation events' effects on user permissions and HonorScores.
 
-*REQUIRED auth scopes*: NONE
+**REQUIRED auth scopes**: NONE
 
-*Auth*: `app_private:accesstoken`
+**Auth**: `app_private:accesstoken`
 
 Example request:
 
@@ -323,11 +323,11 @@ Instead of caching usernames on your end for display and lookups, use the follow
 
 ### POST `/v1/resolveUser`
 
-*Description*: This endpoint is used to resolve usernames or user IDs from the other.
+**Description**: This endpoint is used to resolve usernames or user IDs from the other.
 
-*REQUIRED auth scopes*: NONE
+**REQUIRED auth scopes**: NONE
 
-*Auth*: `app_private`
+**Auth**: `app_private`
 
 Example request for username -> user ID:
 
