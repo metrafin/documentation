@@ -107,7 +107,7 @@ Example response:
 
 ## Profile information
 
-### GET `/v1/profile`
+### GET `/v1/user/profile`
 
 **Description**: Fetch information about a user's profile. Some information may be missing depending on the auth scopes granted to your application.
 
