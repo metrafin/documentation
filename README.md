@@ -321,7 +321,7 @@ Instead of caching usernames on your end for display and lookups, use the follow
 - Get usernames by user ID for display of usernames
 - Get user IDs from usernames for fetching a user by username
 
-![Use case for lookupUser API from username to userId](https://raw.githubusercontent.com/ethanent/metrafin-documentation/master/media/resolveUser/add-friend-demo.png)
+![Use case for lookupUser API from username to userId](https://raw.githubusercontent.com/metrafin/documentation/master/media/resolveUser/add-friend-demo.png)
 
 ### POST `/v1/resolveUser`
 
