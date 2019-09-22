@@ -1,10 +1,8 @@
-![Banner](https://raw.githubusercontent.com/metrafin/documentation/master/media/banner/banner.png)
+![Metrafin API Documentation](https://raw.githubusercontent.com/metrafin/documentation/master/media/banner/banner.png)
 
-# Metrafin Documentation
-> Metrafin Platform API Documentation
+# Contents
 
-# Skip to
-
+- [Introduction](#introduction)
 - [Creating an Application](#creating-an-application)
 - [Authorization](#authorization)
 - [Endpoints](#endpoints)
