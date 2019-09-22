@@ -4,6 +4,7 @@
 
 - [Introduction](#introduction)
 - [Creating an Application](#creating-an-application)
+- [Official API clients](#official-api-clients)
 - [Authorization](#authorization)
 - [Endpoints](#endpoints)
 	- [Token management](#token-management)
@@ -29,7 +30,7 @@ Metrafin's uses OAuth for user account access management and provides a straight
 
 Using Metrafin's reputation system, your application can preemptively block users based on their behaviour in other applications. Metrafin provides two powerful reputation APIs: the Permissions API and the HonorScore API. The Permissions API should be used to automatically block user behaviour such as making public posts, commenting, making financial transactions, or creating group chats based on past behaviour online and the HonorScore API should be used to display a reputation score for users and moderators.
 
-HonorScore is a scaled score which is greater than 0 and less than 100. It is rounded to 1 decimal place.
+HonorScore is a scaled score which is between 0 and 100 (inclusive). It is rounded to 1 decimal place.
 
 ## Terms
 
@@ -66,6 +67,10 @@ You must place a `mf_manifest.json` file in the root folder on your domain's web
 When a user is redirected to your redirect URI following authorization, an `accesstoken` will be provided in the query string of the page. Use this along with your application's private token to access the API to access information about the user. See [Authentication](#authentication) for more information about authentication.
 
 For example, your user may be redirected to the URL `https://example.com/auth?accesstoken=66sULabGH9AK2dqjt0SVCzBq0BKN_mB2`.
+
+# Official API Clients
+
+[Node.js API client](https://github.com/metrafin/node-client)
 
 # Authorization
 
