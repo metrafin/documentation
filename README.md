@@ -129,7 +129,7 @@ Example response:
 		"lastname": "Daniels",
 		"country": "US",
 		"homeAddress": {
-			"full": "18 Hayward Street, San Francisco, CA 94925, USA",
+			"full": "18 Hayward Street, San Francisco, CA 94103, USA",
 			"line1": "18 Hayward Street",
 			"line2": null,
 			"city": "San Francisco",
