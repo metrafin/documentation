@@ -86,6 +86,8 @@ The API base URL is `https://api.metrafin.com`.
 
 ## Token management
 
+![Server receives and validates access token before allowing user to proceed](https://raw.githubusercontent.com/metrafin/documentation/master/media/acceptAccessToken/acceptAccessToken.png)
+
 ### GET `/v1/token`
 
 **Description**: Fetch information about an access token.
