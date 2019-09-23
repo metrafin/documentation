@@ -107,7 +107,7 @@ Example response:
 		"reputation_read",
 		"reputation_contribute"
 	],
-	"userid": "da53da25-2326-481c-9511-68ba549a42ad",
+	"userId": "da53da25-2326-481c-9511-68ba549a42ad",
 	"expires": "2019-09-25T05:02:39.586Z"
 }
 ```
