@@ -140,6 +140,7 @@ Example response:
 			"line1": "18 Hayward Street",
 			"line2": null,
 			"city": "San Francisco",
+			"administrativeDivision": "San Francisco County",
 			"postalCode": "94103",
 			"administrativeRegion": "CA",
 			"countryCode": "US"
