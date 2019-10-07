@@ -64,9 +64,9 @@ You must place a `mf_manifest.json` file in the root folder on your domain's web
 
 ## Accepting access tokens
 
-When a user is redirected to your redirect URI following authorization, an `accesstoken` will be provided in the query string of the page. Use this along with your application's private token to access the API to access information about the user. See [Authentication](#authentication) for more information about authentication.
+When a user is redirected to your redirect URI following authorization, an `authorization_code` will be provided in the query string of the page. Use this along with your application's private token to use the API to retrieve an access token. Access tokens are used to retrieve information about the user and access user-related endpoints. See [Authentication](#authentication) for more information about authentication.
 
-For example, your user may be redirected to the URL `https://example.com/auth?accesstoken=66sULabGH9AK2dqjt0SVCzBq0BKN_mB2`.
+For example, your user may be redirected to the URL `https://example.com/auth?authorization_code=66sULabGH9AK2dqjt0SVCzBq0BKN_mB2`.
 
 # Official API Clients
 
@@ -74,7 +74,7 @@ For example, your user may be redirected to the URL `https://example.com/auth?ac
 
 # Authorization
 
-To authenticate to endpoints, use an `Authorization` header containing just your application's private token, a colon, and an accesstoken provided to your application. (See [Accepting Access Tokens](#accepting-access-tokens) for more info about access tokens.)
+To authenticate to endpoints, use an `Authorization` header containing just your application's private token, a colon, and an access token provided to your application. (See [Accepting Access Tokens](#accepting-access-tokens) for more info about access tokens.)
 
 For endpoints listed in the Endpoints section labeled "Auth: app_private:accesstoken", follow the `app_private_token:accesstoken` format. ex. `Authorization: ep7c02pVdLhp9tti9z3fj5aqT0ZlvmJ_qDb1wM7Xft4mI_Kf:66sULabGH9AK2dqjt0SVCzBq0BKN_mB2`
 
@@ -86,7 +86,30 @@ The API base URL is `https://api.metrafin.com`.
 
 ## Token management
 
-![Server receives and validates access token before allowing user to proceed](https://raw.githubusercontent.com/metrafin/documentation/master/media/acceptAccessToken/acceptAccessToken.png)
+![Server receives authorization code and retrieves access token](https://raw.githubusercontent.com/metrafin/documentation/master/media/acceptAccessToken/acceptAccessToken.png)
+
+### POST `/v1/createAccessToken`
+
+**Description**: Get an access token from an authorization code.
+
+**Auth**: `app_private`
+
+Example request:
+
+```json
+{
+	"authorizationCode": "4HoOsRhedJw9sFhwmRm5RpVKf2X4qF4z"
+}
+```
+
+Example response:
+
+```json
+{
+	"error": null,
+	"accessToken": "wPogcdnUsVvF2-lfCW3jydR9PJvzJYE_"
+}
+```
 
 ### GET `/v1/token`
 
