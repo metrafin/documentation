@@ -64,9 +64,11 @@ You must place a `mf_manifest.json` file in the root folder on your domain's web
 
 ## Accepting access tokens
 
-When a user is redirected to your redirect URI following authorization, an `authorization_code` will be provided in the query string of the page. Use this along with your application's private token to use the API to retrieve an access token. Access tokens are used to retrieve information about the user and access user-related endpoints. See [Authentication](#authentication) for more information about authentication.
+When a user is redirected to your redirect URI following authorization, an `authorization_code` will be provided in the query string of the page. Use this along with your application's private token to use the API to retrieve an access token. Access tokens are used to retrieve information about the user and access user-related endpoints. See [Authorization](#authorization) for more information about authorization.
 
 For example, your user may be redirected to the URL `https://example.com/auth?authorization_code=66sULabGH9AK2dqjt0SVCzBq0BKN_mB2`.
+
+Once you receive an `authorization_code`, you should immediately convert it into an access token on your backend. To do this, make a POST request to the [/v1/createAccessToken endpoint](#post-v1createaccesstoken). (See the endpoint's documentation for details.)
 
 # Official API Clients
 
