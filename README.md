@@ -158,7 +158,7 @@ Example response:
 	"verified": {
 		"firstName": "Jason",
 		"middleName": "Lee",
-		"lastname": "Daniels",
+		"lastName": "Daniels",
 		"country": "US",
 		"homeAddress": {
 			"full": "18 Hayward Street, San Francisco, CA 94103, USA",
