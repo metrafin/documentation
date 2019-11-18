@@ -18,6 +18,20 @@
 		- [Disable or reenable reputation event](#post-v1reputationeventsetactive)
 	- [Resolving usernames and user IDs](#resolving-usernames-and-user-ids)
 
+# Official API Clients
+
+[Node.js API client](https://github.com/metrafin/node-client)
+
+```sh
+npm i metrafin
+```
+
+[Go API client](https://github.com/metrafin/go-client) [Active testing in progress, unversioned]
+
+```sh
+go get github.com/metrafin/go-client
+```
+
 # Introduction
 
 The Metrafin API provides developers with a seamless, free, and public way to keep track of individual users and their reputations more effectively than ever. Metrafin prevents individual people from creating multiple accounts and provides all of its users with a globally unique Metrafin user ID. By assigning an ID to each person, consistent across the world as Metrafin expands, Metrafin can build a better online global ID for the future and provide a powerful reputation system alongside it.
@@ -69,10 +83,6 @@ When a user is redirected to your redirect URI following authorization, an `auth
 For example, your user may be redirected to the URL `https://example.com/auth?authorization_code=66sULabGH9AK2dqjt0SVCzBq0BKN_mB2`.
 
 Once you receive an `authorization_code`, you should immediately convert it into an access token on your backend. To do this, make a POST request to the [/v1/createAccessToken endpoint](#post-v1createaccesstoken). (See the endpoint's documentation for details.)
-
-# Official API Clients
-
-[Node.js API client](https://github.com/metrafin/node-client)
 
 # Authorization
 
